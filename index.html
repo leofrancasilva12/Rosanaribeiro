@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#1a7fc1">
 <title>Dom Pedrinho – Rosana Ribeiro</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
@@ -20,44 +21,22 @@
 
   body {
     min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(145deg, #e8f4fd 0%, #d0e8f5 50%, #bdd9ed 100%);
+    margin: 0;
+    padding: 0;
+    background: #ffffff;
     font-family: 'DM Sans', sans-serif;
-    padding: 20px;
   }
 
-  body::before {
-    content: '';
-    position: fixed;
-    width: 500px; height: 500px;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(26,127,193,.15), transparent 70%);
-    top: -150px; right: -150px;
-    pointer-events: none;
-  }
-  body::after {
-    content: '';
-    position: fixed;
-    width: 400px; height: 400px;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(245,166,35,.1), transparent 70%);
-    bottom: -100px; left: -100px;
-    pointer-events: none;
-  }
+
 
   /* card */
   .card {
     width: 100%;
-    max-width: 380px;
-    border-radius: 24px;
+    max-width: 100%;
+    border-radius: 0;
     overflow: hidden;
     background: #ffffff;
-    box-shadow:
-      0 0 0 1px rgba(26,127,193,.12),
-      0 20px 60px rgba(14,90,138,.2),
-      0 4px 16px rgba(0,0,0,.08);
+    min-height: 100vh;
     animation: riseIn .9s cubic-bezier(.22,1,.36,1) both;
   }
   @keyframes riseIn {
@@ -114,10 +93,13 @@
   /* body */
   .card-body {
     background: #ffffff;
-    padding: 0 28px 28px;
+    padding: 0 20px 28px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-width: 480px;
+    margin: 0 auto;
+    width: 100%;
   }
 
   .avatar-wrap {
@@ -191,6 +173,7 @@
     flex-direction: column;
     gap: 10px;
     width: 100%;
+    max-width: 440px;
   }
   .contact-item {
     display: flex;
@@ -244,13 +227,14 @@
   /* footer */
   .card-footer {
     background: var(--light);
-    padding: 16px 24px 20px;
+    padding: 16px 24px 28px;
     border-top: 1px solid rgba(26,127,193,.1);
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 6px;
     animation: riseIn 1s .6s both;
+    width: 100%;
   }
   .footer-badge {
     font-size: 10px;
@@ -288,7 +272,7 @@
 
   <div class="card-header">
     <div class="logo-wrap">
-      <img src="Img/logo.png" alt="Dom Pedrinho" class="logo-img" />
+      <img src="img/logo.png" alt="Dom Pedrinho" class="logo-img" />
     </div>
     <svg class="wave" viewBox="0 0 380 60" preserveAspectRatio="none">
       <path d="M0,25 C70,60 140,0 210,30 C280,60 330,10 380,35 L380,60 L0,60 Z" fill="#ffffff"/>
